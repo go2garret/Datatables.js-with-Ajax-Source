@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Vue Datatables Ajax Example</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  
+  <div class="centered-content">
+    
+    <div class="header">
+      
+      <div class="icons">
+        <i class="fas fa-heart fa-lg mr-2"></i>
+        <i class="fas fa-link fa-lg mr-4"></i>
+        <a href="https://codepen.io/g2g" style="color: #ffd843;">
+          <i aria-hidden="true" class="fas fa-paw fa-lg"></i>
+        </a>
+      </div>
+      
+      <h1 class="font-weight-light text-white">
+        Datatables Example Using Vue.js
+      </h1>
+      <h4 class="font-weight-light">
+        A simple and robust way to update Datatables in Vue.js using an Ajax data source.
+      </h4>
+      
+    </div>
+
+      <div class="p-4">
+        <table id="datatable" class="table table-hover table-striped w-100" cellspacing="0">
+          <thead>
+              <tr v-if="columns">
+                <th v-for="column in columns" :key="column" class="text-center">
+                  {{column}}
+                </th>
+              </tr>
+          </thead>
+          <tbody v-if="tableData">
+            <tr v-for="row in tableData" :key="'row'+row.name+row.season">
+              <td v-for="column in columns" :key="row.name+row.season+column">
+                {{row[column]}}
+              </td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+    
+    <h4 v-if="errors" class="text-white font-weight-light m-3 p-4 rounded-lg" style="background:#102852">
+      {{errors}}
+    </h4>
+    
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+<script src='https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js'></script>
+<script src='https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

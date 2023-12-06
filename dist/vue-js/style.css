@@ -1,0 +1,47 @@
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(#1361b7, #529def);
+  height: 1200px;
+  padding: 2rem;
+}
+
+#datatable {
+  padding: 2rem;
+  font-size: 0.92rem;
+}
+#datatable th {
+  border-bottom: 1px solid #4c9dea;
+  color: #164067;
+  background: #e9f2ff;
+}
+#datatable td {
+  padding: 8px;
+}
+
+.centered-content {
+  box-shadow: 0 0 1rem 1px rgba(0, 0, 0, 0.25);
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.header {
+  background: #529def;
+  padding: 4rem 2rem 1rem;
+  color: white;
+  font-weight: 300;
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  align-items: center;
+  color: #083465;
+}
