@@ -1,0 +1,8 @@
+#datatable {
+  font-size: 0.9rem;
+}
+#datatable td {
+  min-width: 100px;
+  padding: 10px 8px;
+  cursor: pointer;
+}
